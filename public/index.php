@@ -43,7 +43,7 @@ $container->set(
     }
 );
 
-$container->set(
+$container->set(                        // Register ke routing.php ke router yang ada di Phalcon
     'router',
     function () {
         require APP_PATH . '/config/routing.php';

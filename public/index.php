@@ -60,6 +60,9 @@ try {
         $_SERVER["REQUEST_URI"]
     );
 
+    echo 'URL anda dihandle oleh ' . $application->router->getControllerName();
+    echo ' dengan action '.$application->router->getActionname().'<br>';
+
     $response->send();
 } catch (\Exception $e) {
     echo 'Exception: ', $e->getMessage();

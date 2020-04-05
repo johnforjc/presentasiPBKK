@@ -6,38 +6,35 @@ class PostRoutes extends RouterGroup
 {
     public function initialize()
     {
-        // Default paths
+
         $this->setPaths(
             [
-                'module'    => 'post',
-                'namespace' => 'Post\Controllers',
+                // 'namespace' => 'post',
+                'controller' => 'post'
             ]
         );
 
-        // All the routes start with /blog
         $this->setPrefix('/post');
 
-        // Add a route to the group
         $this->add(
             '/save',
             [
+                // 'controller' => 'post',
                 'action' => 'save',
             ]
         );
 
-        // Add another route to the group
         $this->add(
             '/edit/{id}',
             [
+                // 'controller' => 'post',
                 'action' => 'edit',
             ]
         );
 
-        // This route maps to a controller different than the default
         $this->add(
-            '/',
+            '/post',
             [
-                'controller' => 'post',
                 'action'     => 'index',
             ]
         );
